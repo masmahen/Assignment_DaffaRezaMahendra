@@ -1,0 +1,74 @@
+package Logic;
+
+import java.util.*;
+
+public class Soal01 {
+
+	private static class Item {
+
+		String name;
+
+		List<Integer> prices;
+
+		public Item(String name, List<Integer> prices) {
+
+			this.name = name;
+
+			this.prices = prices;
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		List<Item> items = new ArrayList<>();
+
+		items.add(new Item("Kaca_mata", new ArrayList<>(Arrays.asList(500, 600, 700, 800))));
+
+		items.add(new Item("Baju", new ArrayList<>(Arrays.asList(200, 400, 350))));
+
+		items.add(new Item("Sepatu", new ArrayList<>(Arrays.asList(400, 350, 200, 300))));
+
+		items.add(new Item("Buku", new ArrayList<>(Arrays.asList(100, 50, 150))));
+
+		int totalAmount = 1000;
+
+		System.out.println(findMaxPurchases(items, totalAmount));
+
+	}
+
+	public static int findMaxPurchases(List<Item> items, int totalAmount) {
+
+		int maxPurchases = 0;
+
+		List<Integer> amounts = new ArrayList<>();
+
+		for (int i = 0; i < items.size(); i++) {
+
+			for (int j = 0; j < items.get(i).prices.size(); j++) {
+
+				amounts.add(items.get(i).prices.get(j));
+
+			}
+
+		}
+
+		Collections.sort(amounts, Collections.reverseOrder());
+
+		int i = 0;
+
+		while (i < amounts.size() && totalAmount >= amounts.get(i)) {
+
+			totalAmount -= amounts.get(i);
+
+			maxPurchases++;
+
+			i++;
+
+		}
+
+		return maxPurchases;
+
+	}
+}
