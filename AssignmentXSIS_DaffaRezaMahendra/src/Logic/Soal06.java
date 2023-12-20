@@ -1,21 +1,24 @@
-package Logic;
+package logic;
+
+import java.util.Scanner;
 
 public class Soal06 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String kata1 = "katak";
-		String kata2 = "12021";
-		String kata3 = "malam";
-		String kata4 = "contoh";
+		Scanner scanner = new Scanner(System.in);
 
-		// Memeriksa apakah kata-kata tersebut adalah palindrome
-		System.out.println(kata1 + " adalah palindrome: " + isPalindrome(kata1));
-		System.out.println(kata2 + " adalah palindrome: " + isPalindrome(kata2));
-		System.out.println(kata3 + " adalah palindrome: " + isPalindrome(kata3));
-		System.out.println(kata4 + " adalah palindrome: " + isPalindrome(kata4));
+		System.out.print("Masukkan sebuah kata: ");
+		String kata = scanner.nextLine();
 
+		if (isPalindrome(kata)) {
+			System.out.println(kata + " adalah palindrome.");
+		} else {
+			System.out.println(kata + " bukan palindrome.");
+		}
+
+		scanner.close();
 	}
 
 	public static boolean isPalindrome(String kata) {
