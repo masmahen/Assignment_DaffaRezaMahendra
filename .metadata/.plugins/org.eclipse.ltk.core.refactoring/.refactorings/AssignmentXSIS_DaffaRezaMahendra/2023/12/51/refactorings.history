@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Logic.Soal02&apos; to &apos;Soal04&apos;&#x0D;&#x0A;- Original project: &apos;AssignmentXSIS_DaffaRezaMahendra&apos;&#x0D;&#x0A;- Original element: &apos;Logic.Soal02&apos;&#x0D;&#x0A;- Renamed element: &apos;Logic.Soal04&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Soal02&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Logic{Soal02.java[Soal02" matchStrategy="1" name="Soal04" qualified="false" references="true" similarDeclarations="false" stamp="1702887924671" textual="false" version="1.0"/>
+</session>
