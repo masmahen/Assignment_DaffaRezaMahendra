@@ -16,18 +16,20 @@ public class Soal01 {
 
 	public static void main(String[] args) {
 		List<Barang> daftarBarang = new ArrayList<>();
+		// Inisialisasi daftar barang beserta harganya
 		daftarBarang.add(new Barang("Kacamata", Arrays.asList(500, 600, 700, 800)));
 		daftarBarang.add(new Barang("Baju", Arrays.asList(200, 400, 350)));
 		daftarBarang.add(new Barang("Sepatu", Arrays.asList(400, 350, 200, 300)));
 		daftarBarang.add(new Barang("Buku", Arrays.asList(100, 50, 150)));
 
-		int uang = 1000;
+		int uang = 1000; // Jumlah uang yang dimiliki Andi
 
 		int maxUang = 0;
 		int maxItem = 0;
 
 		List<Integer> itemTerpilih = new ArrayList<>();
 
+		// Looping untuk mencari kombinasi barang dengan jumlah uang maksimal
 		for (int i = 0; i < daftarBarang.get(0).harga.size(); i++) {
 			for (int j = 0; j < daftarBarang.get(1).harga.size(); j++) {
 				for (int k = 0; k < daftarBarang.get(2).harga.size(); k++) {
@@ -60,6 +62,7 @@ public class Soal01 {
 			}
 		}
 
+		// Menampilkan hasil
 		System.out.println("Jumlah uang yang dipakai: " + maxUang);
 		System.out.print("Jumlah item yang bisa dibeli: " + maxItem + " (");
 		for (int item : itemTerpilih) {

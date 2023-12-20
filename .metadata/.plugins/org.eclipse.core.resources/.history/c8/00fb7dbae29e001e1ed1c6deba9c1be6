@@ -12,11 +12,13 @@ public class Soal04 {
 		int N = Integer.parseInt(scan.nextLine());
 		int count = 0;
 		int num = 2;
-		while (count != N) {
-			boolean prime = true;
-			for (int i = 2; i <= Math.sqrt(num); i++) { 
+		while (count != N) { // while count!= number of prime numbers entered keep searching..
+			boolean prime = true;// to determine whether the number is prime or not
+			for (int i = 2; i <= Math.sqrt(num); i++) { // efficiency matters
 				if (num % i == 0) {
-					prime = false;
+					prime = false; // if number divides any other number its not a prime so set prime to false and
+									// break the loop.
+					break;
 				}
 
 			}
