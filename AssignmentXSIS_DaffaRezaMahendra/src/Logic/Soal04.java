@@ -12,7 +12,7 @@ public class Soal04 {
 		int N = Integer.parseInt(scan.nextLine());
 		int count = 0;
 		int num = 2;
-		while (count != N) {
+		while (count < N) {
 			boolean prime = true;
 			for (int i = 2; i <= Math.sqrt(num); i++) { 
 				if (num % i == 0) {
