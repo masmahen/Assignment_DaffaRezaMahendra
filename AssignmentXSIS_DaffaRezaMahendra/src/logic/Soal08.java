@@ -31,7 +31,6 @@ public class Soal08 {
 	public static int cariMinimalPenjumlahan4Komponen(int[] deretAngka) {
 		Arrays.sort(deretAngka);
 		int minimal = Integer.MAX_VALUE;
-
 		int panjang = deretAngka.length;
 		for (int i = 0; i < panjang - 3; i++) {
 			int sum = deretAngka[i] + deretAngka[i + 1] + deretAngka[i + 2] + deretAngka[i + 3];

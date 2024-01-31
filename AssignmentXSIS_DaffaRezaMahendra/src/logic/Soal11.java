@@ -19,14 +19,9 @@ public class Soal11 {
 
 	public static void tampilkanOutput(String kata) {
 		for (int i = kata.length() - 1; i >= 0; i--) {
-			for (int j = 0; j < kata.length(); j++) {
-				if (j == i) {
-					System.out.print(kata.charAt(j));
-				} else {
-					System.out.print("*");
-				}
-			}
-			System.out.println();
+			char huruf = kata.charAt(i);
+			System.out.println("**" + huruf + "**");
+
 		}
 	}
 
